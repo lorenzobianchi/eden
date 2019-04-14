@@ -1,0 +1,18 @@
+<header 
+    [ngClass]="{'medium-movies':medium === 'Movies', 'medium-series':medium === 'Series'}">
+    <div>{{ edenItems | areaList }}</div>
+</header>
+<section>
+  <app-eden-item
+    [ngClass]="{'medium-movies': edenItem.area==='Giardino', 'medium-series':edenItem.area==='Balcone'}" 
+    *ngFor="let edenItem of edenItems"
+    [edenItem]="edenItem"
+    (delete)="onEdenItemDelete($event)"></app-eden-item>
+</section>
+<footer>
+  <div class="plus-container">
+      <a routerLink="/add">
+        <i class="icon ion-md-add"></i>
+      </a>    
+  </div>
+</footer>

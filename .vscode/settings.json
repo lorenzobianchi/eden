@@ -1,0 +1,28 @@
+{
+    "workbench.colorCustomizations": {
+      "activityBar.background": "#6ce96c"
+    },
+    "cSpell.enabledLanguageIds": [
+        "asciidoc",
+        "c",
+        "cpp",
+        "csharp",
+        "go",
+        "handlebars",
+        "jade",
+        "javascript",
+        "javascriptreact",
+        "json",
+        "latex",
+        "less",
+        "php",
+        "plaintext",
+        "pub",
+        "python",
+        "restructuredtext",
+        "rust",
+        "text",
+        "typescriptreact",
+        "yml"
+    ]
+  }
