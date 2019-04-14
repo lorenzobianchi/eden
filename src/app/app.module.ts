@@ -10,6 +10,7 @@ import { FavoriteDirective } from './favorite.directive';
 import { AreaListPipe } from './area-list.pipe';
 import { EdenItemFormComponent } from './eden-item-form/eden-item-form.component';
 import { EdenItemsService } from './eden-items.service';
+import { lookupList, lookupListToken } from './providers';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,10 @@ import { EdenItemsService } from './eden-items.service';
     AppRoutingModule,
     ReactiveFormsModule,
   ],
-  providers: [EdenItemsService],
+  providers: [
+    EdenItemsService,
+    { provide: lookupListToken, useValue: lookupList }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

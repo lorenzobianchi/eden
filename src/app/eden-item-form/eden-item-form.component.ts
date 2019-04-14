@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { EdenItemsService } from '../eden-items.service';
+import { lookupListToken } from '../providers';
 
 @Component({
   selector: 'app-eden-item-form',
@@ -9,10 +10,10 @@ import { EdenItemsService } from '../eden-items.service';
 })
 export class EdenItemFormComponent implements OnInit {
   form;
-  lookupLists = {
-    areas: ['Balcone', 'Giardino', 'Appartamento']
-  };
-  constructor(private edenItemsService: EdenItemsService) { }
+  constructor(
+    private edenItemsService: EdenItemsService,
+    @Inject(lookupListToken) public lookupList
+    ) { }
 
   ngOnInit() {
     this.form = new FormGroup({
